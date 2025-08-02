@@ -5,9 +5,12 @@ import tailwindcss from '@tailwindcss/vite';
 
 import react from '@astrojs/react';
 
+import vercel from '@astrojs/vercel';
+
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
+
   env: {
     schema: {
       BETTER_AUTH_SECRET: envField.string({ context: "server", access: 'secret'}),
@@ -17,9 +20,11 @@ export default defineConfig({
       MONGODB_URI: envField.string({ context: 'server', access: 'secret'})
     }
   },
+
   vite: {
     plugins: [tailwindcss()]
   },
 
-  integrations: [react()]
+  integrations: [react()],
+  adapter: vercel()
 });
