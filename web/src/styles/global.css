@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: ZxProto;
+    font-weight: bold;
+    font-display: initial;
+    src: url(/fonts/0xProto-Bold.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: ZxProto;
+    font-style: italic;
+    font-display: initial;
+    src: url(/fonts/0xProto-Italic.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: ZxProto;
+    font-style: normal;
+    font-display: initial;
+    src: url(/fonts/0xProto-Regular.woff2) format("woff2");
+}
+
+@theme {
+    --font-zxproto: ZxProto, monospace;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { signIn, signUp, useSession } from "../lib/auth-client";
+import { signIn } from "../lib/auth-client";
 
 export default function LoginButton() {
   const login = async () => {
