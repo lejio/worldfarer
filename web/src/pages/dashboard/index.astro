@@ -1,9 +1,12 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import LogoutButton from "../../components/LogoutButton"
+import AuthorizedLayout from "../../layouts/AuthorizedLayout.astro";
+import HomeHero from "../../components/HomeHero"
+// To-dos
+// Global announcements
+// Events
+// Organizations
 ---
 
-<div>
-    You have successfully logged in!
-    <LogoutButton client:load />
-</div>
+<AuthorizedLayout title="Home">
+  <HomeHero />
+</AuthorizedLayout>

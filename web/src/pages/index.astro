@@ -1,16 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Profile from "../components/Profile";
 import LoginButton from "../components/LoginButton";
 import RegisterButton from "../components/RegisterButton";
 ---
 
 <Layout>
-  <div class="flex flex-col justify-between align-middle items-center gap-20">
+  <div class="transition-color duration-300  flex flex-col justify-between align-middle items-center gap-20">
     <div class="flex flex-col justify-between align-middle items-center gap-5">
-      <p class="text-lg text-green-700 text-center">Welcome</p>
+      <p class="text-lg text-green-700 dark:text-green-600 text-center">Welcome</p>
       <h1
-        class="flex flex-col text-center md:flex-row md:gap-10 text-base/4 text-green-800"
+        class="flex flex-col text-center md:flex-row md:gap-10 text-base/4 text-green-800 dark:text-green-600"
       >
         <pre>
 ▄▄▌ ▐ ▄▌      ▄▄▄  ▄▄▌  ·▄▄▄▄  
@@ -31,11 +30,11 @@ import RegisterButton from "../components/RegisterButton";
     <div class="flex flex-col text-sm text-center justify-center gap-10 md:gap-20">
       <div class="flex flex-col gap-5">
         <h2 class="text-[#888888] dark:text-gray-400">Member?</h2>
-        <LoginButton />
+        <LoginButton client:load />
       </div>
       <div class="flex flex-col gap-5">
         <h2 class="text-[#888888] dark:text-gray-400">Invited?</h2>
-        <RegisterButton />
+        <RegisterButton client:load />
       </div>
     </div>
   </div>

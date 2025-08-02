@@ -11,7 +11,7 @@ export default function LoginButton() {
   };
   return (
     <button
-      className="rounded-full bg-green-800 p-2 px-3 text-white hover:cursor-pointer"
+      className="rounded-full bg-green-800 dark:bg-green-600 p-2 px-3 text-white hover:cursor-pointer"
       onClick={login}
     >
       Login
