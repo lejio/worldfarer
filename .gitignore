@@ -24,3 +24,5 @@ web/pnpm-debug.log*
 .idea/
 
 web/.vscode/
+web/.env
+web/.env.production
