@@ -1,1 +1,0 @@
-import{j as r}from"./jsx-runtime.D_zvdyIk.js";import"./index.DtoOFyvK.js";import{n as e}from"./router.BAoBNMex.js";function a(){return r.jsx("button",{className:"rounded-full border border-green-600 dark:border-green-600 p-2 px-3 text-green-600 dark:text-green-600 max-w-[40vw] hover:cursor-pointer",onClick:()=>e("/"),children:"Register"})}export{a as default};
