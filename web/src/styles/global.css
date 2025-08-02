@@ -24,3 +24,5 @@
 @theme {
     --font-zxproto: ZxProto, monospace;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));

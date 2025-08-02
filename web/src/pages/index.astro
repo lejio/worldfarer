@@ -1,13 +1,42 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Profile from '../components/Profile';
-import LoginButton from '../components/LoginButton';
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Profile from "../components/Profile";
+import LoginButton from "../components/LoginButton";
+import RegisterButton from "../components/RegisterButton";
 ---
 
 <Layout>
-	<h1 class=" text-2xl font-zxproto">Hello World Farer</h1>
-	<!-- <Profile /> -->
-	<LoginButton client:load />
+  <div class="flex flex-col justify-between align-middle items-center gap-20">
+    <div class="flex flex-col justify-between align-middle items-center gap-5">
+      <p class="text-lg text-green-700 text-center">Welcome</p>
+      <h1
+        class="flex flex-col text-center md:flex-row md:gap-10 text-base/4 text-green-800"
+      >
+        <pre>
+▄▄▌ ▐ ▄▌      ▄▄▄  ▄▄▌  ·▄▄▄▄  
+██· █▌▐█▪     ▀▄ █·██•  ██▪ ██ 
+██▪▐█▐▐▌ ▄█▀▄ ▐▀▀▄ ██▪  ▐█· ▐█▌
+▐█▌██▐█▌▐█▌.▐▌▐█•█▌▐█▌▐▌██. ██ 
+ ▀▀▀▀ ▀▪ ▀█▄▀▪.▀  ▀.▀▀▀ ▀▀▀▀▀• 
+		</pre>
+        <pre>
+·▄▄▄ ▄▄▄· ▄▄▄  ▄▄▄ .▄▄▄  
+▐▄▄·▐█ ▀█ ▀▄ █·▀▄.▀·▀▄ █·
+██▪ ▄█▀▀█ ▐▀▀▄ ▐▀▀▪▄▐▀▀▄ 
+██▌.▐█ ▪▐▌▐█•█▌▐█▄▄▌▐█•█▌
+▀▀▀  ▀  ▀ .▀  ▀ ▀▀▀ .▀  ▀
+		</pre>
+      </h1>
+    </div>
+    <div class="flex flex-col text-sm text-center justify-center gap-10 md:gap-20">
+      <div class="flex flex-col gap-5">
+        <h2 class="text-[#888888] dark:text-gray-400">Member?</h2>
+        <LoginButton />
+      </div>
+      <div class="flex flex-col gap-5">
+        <h2 class="text-[#888888] dark:text-gray-400">Invited?</h2>
+        <RegisterButton />
+      </div>
+    </div>
+  </div>
 </Layout>

@@ -6,7 +6,12 @@ export const onRequest = defineMiddleware(async (context, next) => {
     .getSession({
       headers: context.request.headers,
     })
-  if (context.url.pathname === "/dashboard" && !isAuthed) {
+    .catch((e) => {
+      return null;
+    })
+  if (context.url.pathname == "/" && isAuthed) {
+    return context.redirect("/dashboard");
+  } else if (context.url.pathname === "/dashboard" && !isAuthed) {
     return context.redirect("/");
   }
   return next();

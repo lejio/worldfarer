@@ -3,17 +3,18 @@ import { signIn } from "../lib/auth-client";
 
 export default function LoginButton() {
   const login = async () => {
-    console.log(
-      "Starting login"
-    )
+    console.log("Starting login");
     await signIn.social({
       provider: "microsoft",
-      callbackURL: '/dashboard'
+      callbackURL: "/dashboard",
     });
   };
   return (
-    <div>
-      <button onClick={login}>Log In</button>
-    </div>
+    <button
+      className="rounded-full bg-green-800 p-2 px-3 text-white hover:cursor-pointer"
+      onClick={login}
+    >
+      Login
+    </button>
   );
 }

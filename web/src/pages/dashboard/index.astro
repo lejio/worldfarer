@@ -1,7 +1,9 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import LogoutButton from "../../components/LogoutButton"
 ---
 
 <div>
     You have successfully logged in!
+    <LogoutButton client:load />
 </div>
