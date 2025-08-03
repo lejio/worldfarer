@@ -27,7 +27,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <main class="flex flex-col justify-between h-full w-full font-zxproto">
+    <main class="flex flex-col dark:bg-gray-900 justify-between h-full w-full font-zxproto">
       <AuthorizedNavbar client:load />
       <slot />
       <Footer />

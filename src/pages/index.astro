@@ -2,14 +2,20 @@
 import Layout from "../layouts/Layout.astro";
 import LoginButton from "../components/LoginButton";
 import RegisterButton from "../components/RegisterButton";
+import InteractiveEarth from "../components/InteractiveEarth";
 ---
 
 <Layout>
-  <div class="transition-color duration-300  flex flex-col justify-between align-middle items-center gap-20">
-    <div class="flex flex-col justify-between align-middle items-center gap-5">
-      <p class="text-lg text-green-700 dark:text-green-600 text-center">Welcome</p>
+  <div
+    class="transition-color duration-300 flex flex-col justify-between align-middle items-center gap-10"
+  >
+    <div class="flex flex-col justify-between align-middle items-center gap-10">
+      <InteractiveEarth client:load />
+      <p class="hidden md:block text-lg text-green-700 dark:text-green-600 text-center">
+        Welcome
+      </p>
       <h1
-        class="flex flex-col text-center md:flex-row md:gap-10 text-base/4 text-green-800 dark:text-green-600"
+        class="flex flex-col text-center md:flex-row md:gap-10 text-xs/3 md:text-base/4 text-green-800 dark:text-green-600"
       >
         <pre>
 ▄▄▌ ▐ ▄▌      ▄▄▄  ▄▄▌  ·▄▄▄▄  
@@ -27,12 +33,14 @@ import RegisterButton from "../components/RegisterButton";
 		</pre>
       </h1>
     </div>
-    <div class="flex flex-col text-sm text-center justify-center gap-10 md:gap-20">
-      <div class="flex flex-col gap-5">
+    <div
+      class="flex md:flex-col text-sm text-center justify-center gap-10"
+    >
+      <div class="flex flex-col gap-5 w-32">
         <h2 class="text-[#888888] dark:text-gray-400">Member?</h2>
         <LoginButton client:load />
       </div>
-      <div class="flex flex-col gap-5">
+      <div class="flex flex-col gap-5 w-32">
         <h2 class="text-[#888888] dark:text-gray-400">Invited?</h2>
         <RegisterButton client:load />
       </div>
