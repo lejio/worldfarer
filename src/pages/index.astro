@@ -11,31 +11,33 @@ import InteractiveEarth from "../components/InteractiveEarth";
   >
     <div class="flex flex-col justify-between align-middle items-center gap-10">
       <InteractiveEarth client:load />
-      <p class="hidden md:block text-lg text-green-700 dark:text-green-600 text-center">
-        Welcome
-      </p>
-      <h1
-        class="flex flex-col text-center md:flex-row md:gap-10 text-xs/3 md:text-base/4 text-green-800 dark:text-green-600"
-      >
-        <pre>
+      <div>
+        <p
+          class="hidden md:block text-lg md:text-xl text-green-700 dark:text-green-600 text-center"
+        >
+          Welcome,
+        </p>
+        <h1
+          class="flex flex-col text-center md:flex-row md:gap-10 text-xs/3 md:text-base/4 text-green-800 dark:text-green-600"
+        >
+          <pre>
 ▄▄▌ ▐ ▄▌      ▄▄▄  ▄▄▌  ·▄▄▄▄  
 ██· █▌▐█▪     ▀▄ █·██•  ██▪ ██ 
 ██▪▐█▐▐▌ ▄█▀▄ ▐▀▀▄ ██▪  ▐█· ▐█▌
 ▐█▌██▐█▌▐█▌.▐▌▐█•█▌▐█▌▐▌██. ██ 
  ▀▀▀▀ ▀▪ ▀█▄▀▪.▀  ▀.▀▀▀ ▀▀▀▀▀• 
 		</pre>
-        <pre>
+          <pre>
 ·▄▄▄ ▄▄▄· ▄▄▄  ▄▄▄ .▄▄▄  
 ▐▄▄·▐█ ▀█ ▀▄ █·▀▄.▀·▀▄ █·
 ██▪ ▄█▀▀█ ▐▀▀▄ ▐▀▀▪▄▐▀▀▄ 
 ██▌.▐█ ▪▐▌▐█•█▌▐█▄▄▌▐█•█▌
 ▀▀▀  ▀  ▀ .▀  ▀ ▀▀▀ .▀  ▀
 		</pre>
-      </h1>
+        </h1>
+      </div>
     </div>
-    <div
-      class="flex md:flex-col text-sm text-center justify-center gap-10"
-    >
+    <div class="flex md:flex-col text-sm text-center justify-center gap-10">
       <div class="flex flex-col gap-5 w-32">
         <h2 class="text-[#888888] dark:text-gray-400">Member?</h2>
         <LoginButton client:load />

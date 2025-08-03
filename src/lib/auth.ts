@@ -10,6 +10,7 @@ const db = client.db();
 
 export const auth = betterAuth({
   database: mongodbAdapter(db),
+  trustedOrigins: ["https://localhost:3000", "https://localhost:4321", "https://worldfarer.com", "https://www.worldfarer.com"],
   socialProviders: {
     microsoft: {
       clientId: MICROSOFT_CLIENT_ID,
